@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://c5ykhs48pu5pw"]
+
+[ext_resource type="Texture2D" uid="uid://jex4q5f8m1ru" path="res://images/church.png" id="1_ua547"]
+[ext_resource type="Script" uid="uid://54qnnwm26nij" path="res://scripts/portal.gd" id="2_20jv8"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_wm84f"]
+
+[node name="Church" type="Sprite3D" unique_id=813082408]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, 0, 0)
+billboard = 2
+texture_filter = 0
+texture = ExtResource("1_ua547")
+script = ExtResource("2_20jv8")
+scene_in = "res://scenes/church_world.tscn"
+scene_out = "res://scenes/level1.tscn"
+
+[node name="Area3D" type="Area3D" parent="." unique_id=705768992]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=179124733]
+shape = SubResource("BoxShape3D_wm84f")

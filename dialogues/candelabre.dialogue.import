@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://7blduycwvjau"
+path="res://.godot/imported/candelabre.dialogue-3e0be144fc52d95519e156d8a06c99b4.tres"
+
+[deps]
+
+source_file="res://dialogues/candelabre.dialogue"
+dest_files=["res://.godot/imported/candelabre.dialogue-3e0be144fc52d95519e156d8a06c99b4.tres"]
+
+[params]
+
+defaults=true

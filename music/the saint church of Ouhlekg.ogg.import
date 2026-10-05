@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://bwc872vgjx2o5"
+path="res://.godot/imported/the saint church of Ouhlekg.ogg-02dafc3312868525c14897502155e9ae.oggvorbisstr"
+
+[deps]
+
+source_file="res://music/the saint church of Ouhlekg.ogg"
+dest_files=["res://.godot/imported/the saint church of Ouhlekg.ogg-02dafc3312868525c14897502155e9ae.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

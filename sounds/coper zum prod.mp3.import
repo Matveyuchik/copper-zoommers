@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://b8lje7hvqdnmi"
+path="res://.godot/imported/coper zum prod.mp3-db70f586a99ddcc3b5ced6046a26e42b.mp3str"
+
+[deps]
+
+source_file="res://sounds/coper zum prod.mp3"
+dest_files=["res://.godot/imported/coper zum prod.mp3-db70f586a99ddcc3b5ced6046a26e42b.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

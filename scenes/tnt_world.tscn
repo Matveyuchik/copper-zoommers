@@ -1,0 +1,66 @@
+[gd_scene format=3 uid="uid://erbehiyq5jwt"]
+
+[ext_resource type="Texture2D" uid="uid://b7y14r6r0lhrm" path="res://images/tntworld.png" id="1_5g674"]
+[ext_resource type="AudioStream" uid="uid://sxyay451nag1" path="res://music/omnious pile of tnt.ogg" id="1_i07mc"]
+[ext_resource type="VideoStream" uid="uid://1s7mcoabb2q5" path="res://videos/tnt.ogv" id="2_8ptn0"]
+[ext_resource type="PackedScene" uid="uid://g5m1bplm0hwa" path="res://scenes/player.tscn" id="3_cexcf"]
+[ext_resource type="PackedScene" uid="uid://barmv450r8hhi" path="res://scenes/tnt_portal.tscn" id="5_k1le1"]
+[ext_resource type="PackedScene" uid="uid://dnkm2dgx01n7g" path="res://scenes/tnt_pile.tscn" id="6_e0m3f"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2mt5k"]
+albedo_texture = ExtResource("1_5g674")
+uv1_triplanar = true
+uv1_triplanar_sharpness = 1.8024997
+texture_filter = 0
+
+[sub_resource type="Environment" id="Environment_wm84f"]
+background_mode = 3
+background_canvas_max_layer = -1
+ambient_light_color = Color(0.46484375, 0.06718445, 0.06718445, 1)
+fog_light_color = Color(0.73828125, 0, 0, 1)
+fog_density = 0.17
+
+[node name="TntWorld" type="Node3D" unique_id=117421547]
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer" parent="." unique_id=341922653]
+stream = ExtResource("1_i07mc")
+autoplay = true
+parameters/looping = true
+
+[node name="Player" parent="." unique_id=470161576 instance=ExtResource("3_cexcf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.306048, 0)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="." unique_id=334357174]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.89224243, 0, -0.6246948)
+use_collision = true
+size = Vector3(128.78021, 1, 129.28967)
+material = SubResource("StandardMaterial3D_2mt5k")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=200969782]
+environment = SubResource("Environment_wm84f")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=524984139]
+transform = Transform3D(1, 0, 0, 0, 0.3045173, 0.9525068, 0, -0.9525068, 0.3045173, 0, 9.473063, 0)
+light_color = Color(0.77734375, 0, 0, 1)
+light_energy = 16.0
+
+[node name="Sky" type="CanvasLayer" parent="." unique_id=233678175]
+layer = -1
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="Sky" unique_id=2015323676]
+z_index = -1
+offset_left = -2.0
+offset_right = 337.0
+offset_bottom = 273.0
+mouse_filter = 2
+stream = ExtResource("2_8ptn0")
+autoplay = true
+expand = true
+loop = true
+
+[node name="TntPortal" parent="." unique_id=892704639 instance=ExtResource("5_k1le1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.7629373, 2.7160747)
+reverse = true
+
+[node name="TntPile" parent="." unique_id=1751105006 instance=ExtResource("6_e0m3f")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 3.7897742, -10.748325)

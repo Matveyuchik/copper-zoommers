@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://bgs7b8rdv31hp"
+path="res://.godot/imported/okurok.dialogue-997840d7e76c59733d84e67052b4b1ca.tres"
+
+[deps]
+
+source_file="res://dialogues/okurok.dialogue"
+dest_files=["res://.godot/imported/okurok.dialogue-997840d7e76c59733d84e67052b4b1ca.tres"]
+
+[params]
+
+defaults=true

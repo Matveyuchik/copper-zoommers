@@ -1,0 +1,169 @@
+[gd_scene format=3 uid="uid://b2s2jykqas3gn"]
+
+[ext_resource type="AudioStream" uid="uid://bwc872vgjx2o5" path="res://music/the saint church of Ouhlekg.ogg" id="1_xijgf"]
+[ext_resource type="PackedScene" uid="uid://wbixy0ohhk5j" path="res://scenes/candelabre.tscn" id="2_sb6u8"]
+[ext_resource type="Script" uid="uid://cm5cipu728lg" path="res://scripts/talking_candelabre.gd" id="3_5hh8q"]
+[ext_resource type="PackedScene" uid="uid://g5m1bplm0hwa" path="res://scenes/player.tscn" id="3_uf0r3"]
+[ext_resource type="PackedScene" uid="uid://b2kfaeb41etn2" path="res://scenes/oulekhg.tscn" id="5_64utk"]
+[ext_resource type="PackedScene" uid="uid://c5ykhs48pu5pw" path="res://scenes/church.tscn" id="6_ishf2"]
+[ext_resource type="Texture2D" uid="uid://b865vg5xfn3vc" path="res://images/door.png" id="7_vif2u"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xijgf"]
+albedo_color = Color(0.8046875, 0, 0, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_t2362"]
+albedo_color = Color(0.0625, 0.0625, 0.0625, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_sb6u8"]
+albedo_color = Color(0.8039216, 0, 0, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_uf0r3"]
+albedo_color = Color(0.0627451, 0.0627451, 0.0627451, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5hh8q"]
+albedo_color = Color(0.0627451, 0.0627451, 0.0627451, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_64utk"]
+albedo_color = Color(0.0627451, 0.0627451, 0.0627451, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3qfpx"]
+albedo_color = Color(0.0627451, 0.0627451, 0.0627451, 1)
+
+[sub_resource type="Environment" id="Environment_wm84f"]
+background_mode = 1
+background_color = Color(0.011329651, 0.0107421875, 0.0859375, 1)
+ambient_light_color = Color(0.37615287, 0.37391663, 0.66015625, 1)
+ambient_light_energy = 1.82
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_wm84f"]
+size = Vector3(1, 1.0834961, 1)
+
+[node name="ChurchWorld" type="Node3D" unique_id=1668114651]
+
+[node name="Building" type="Node3D" parent="." unique_id=1419323307]
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="Building" unique_id=2111986064]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.033355713, 0.0016582012, 0.007338524)
+material_override = SubResource("StandardMaterial3D_xijgf")
+use_collision = true
+size = Vector3(28, 1.2796836, 39.941)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Building" unique_id=1426999343]
+material_override = SubResource("StandardMaterial3D_t2362")
+use_collision = true
+size = Vector3(30, 1, 40)
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="Building" unique_id=2029855749]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0058288574, 0.7829132, -12.602907)
+material_override = SubResource("StandardMaterial3D_sb6u8")
+use_collision = true
+size = Vector3(27.964905, 0.646, 1.143)
+
+[node name="CSGBox3D4" type="CSGBox3D" parent="Building" unique_id=382726830]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.177, -16.588)
+material_override = SubResource("StandardMaterial3D_sb6u8")
+use_collision = true
+size = Vector3(28, 1.435, 6.823)
+
+[node name="CSGBox3D5" type="CSGBox3D" parent="Building" unique_id=1892851134]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.587955, 5.483612, -0.01966858)
+material_override = SubResource("StandardMaterial3D_uf0r3")
+use_collision = true
+size = Vector3(1.0756836, 11.967224, 39.93216)
+
+[node name="CSGBox3D6" type="CSGBox3D" parent="Building" unique_id=782230702]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.434809, 5.483612, -0.01966858)
+material_override = SubResource("StandardMaterial3D_5hh8q")
+use_collision = true
+size = Vector3(1.0756836, 11.967224, 39.93216)
+
+[node name="CSGBox3D7" type="CSGBox3D" parent="Building" unique_id=1521823298]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.05595398, 27.616482, 20.45462)
+material_override = SubResource("StandardMaterial3D_64utk")
+use_collision = true
+size = Vector3(32.0513, 56.232964, 1.0625)
+
+[node name="CSGBox3D8" type="CSGBox3D" parent="Building" unique_id=891370995]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.05595398, 15.10643, -20.476238)
+material_override = SubResource("StandardMaterial3D_64utk")
+use_collision = true
+size = Vector3(32.0513, 31.21286, 1.0625)
+
+[node name="CSGBox3D9" type="CSGBox3D" parent="Building" unique_id=1305586354]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.555752, 19.283905, 0.10230255)
+material_override = SubResource("StandardMaterial3D_3qfpx")
+use_collision = true
+size = Vector3(1, 22.850464, 41.49669)
+
+[node name="CSGBox3D13" type="CSGBox3D" parent="Building" unique_id=1192493727]
+transform = Transform3D(-4.3711385e-08, -0.99999994, 0, 0.99999994, -4.3711385e-08, 0, 0, 0, 1, -0.08081865, 30.222502, -5.995059)
+material_override = SubResource("StandardMaterial3D_3qfpx")
+use_collision = true
+size = Vector3(1, 32.031677, 29.862501)
+
+[node name="CSGBox3D14" type="CSGBox3D" parent="Building" unique_id=446187001]
+transform = Transform3D(-4.3711385e-08, -0.99999994, 0, 0.99999994, -4.3711385e-08, 0, 0, 0, 1, -0.0808192, 42.754898, 8.237986)
+material_override = SubResource("StandardMaterial3D_3qfpx")
+use_collision = true
+size = Vector3(26.064796, 32.031677, 1.3964119)
+
+[node name="CSGBox3D10" type="CSGBox3D" parent="Building" unique_id=1639820726]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.426515, 19.283905, -0.07412815)
+material_override = SubResource("StandardMaterial3D_3qfpx")
+use_collision = true
+size = Vector3(1, 22.850464, 41.84955)
+
+[node name="CSGBox3D11" type="CSGBox3D" parent="Building" unique_id=691742500]
+transform = Transform3D(0.8473714, 0.5310007, 0, -0.5310007, 0.8473714, 0, 0, 0, 1, -7.902027, 43.064217, 14.627073)
+material_override = SubResource("StandardMaterial3D_3qfpx")
+use_collision = true
+size = Vector3(1, 30.090878, 12.447147)
+
+[node name="CSGBox3D12" type="CSGBox3D" parent="Building" unique_id=1431982665]
+transform = Transform3D(-0.8471219, -0.5313986, -8.742278e-08, -0.5313986, 0.8471219, 0, 7.4057745e-08, 4.645634e-08, -1, 8.030065, 43.283768, 14.627073)
+material_override = SubResource("StandardMaterial3D_3qfpx")
+use_collision = true
+size = Vector3(1, 29.572811, 12.447147)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1751613708]
+environment = SubResource("Environment_wm84f")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=652924287]
+stream = ExtResource("1_xijgf")
+autoplay = true
+parameters/looping = true
+
+[node name="OmniLight3D" type="OmniLight3D" parent="." unique_id=1740291257]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 27.831324, 0)
+omni_range = 58.789
+omni_attenuation = 0.984
+
+[node name="Candelabre" parent="." unique_id=1684045777 instance=ExtResource("2_sb6u8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.766891, 3.0490913, 0)
+
+[node name="Candelabre2" parent="." unique_id=1605261604 instance=ExtResource("2_sb6u8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.766891, 3.0490913, 12.77689)
+
+[node name="Candelabre3" parent="." unique_id=411036109 instance=ExtResource("2_sb6u8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.740611, 3.0490913, 12.77689)
+script = ExtResource("3_5hh8q")
+
+[node name="Area3D" type="Area3D" parent="Candelabre3" unique_id=136882376]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Candelabre3/Area3D" unique_id=270752431]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.041748047, 0)
+shape = SubResource("BoxShape3D_wm84f")
+
+[node name="Candelabre4" parent="." unique_id=771244045 instance=ExtResource("2_sb6u8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.740611, 3.0490913, 0.42097664)
+
+[node name="Player" parent="." unique_id=470161576 instance=ExtResource("3_uf0r3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.1754055, 11.38413)
+
+[node name="Oulekhg" parent="." unique_id=1064634599 instance=ExtResource("5_64utk")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 3.6929507, -14.859089)
+
+[node name="Church" parent="." unique_id=813082408 instance=ExtResource("6_ishf2")]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, 4.0220437, 18.452364)
+texture = ExtResource("7_vif2u")
+reverse = true

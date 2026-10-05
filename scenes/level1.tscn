@@ -1,0 +1,88 @@
+[gd_scene format=3 uid="uid://ck74n5kq3ace1"]
+
+[ext_resource type="PackedScene" uid="uid://1qu6kdh8xivq" path="res://scenes/okurok.tscn" id="1_dwgg1"]
+[ext_resource type="VideoStream" uid="uid://cv0gwvayaq2ni" path="res://videos/w.ogv" id="1_ejswk"]
+[ext_resource type="PackedScene" uid="uid://g5m1bplm0hwa" path="res://scenes/player.tscn" id="1_g2h75"]
+[ext_resource type="AudioStream" uid="uid://duabm38fosscd" path="res://music/waterhole.ogg" id="5_ru4tf"]
+[ext_resource type="Texture2D" uid="uid://c0qrtgf121hgv" path="res://images/tile1.png" id="6_ejswk"]
+[ext_resource type="Texture2D" uid="uid://ipqx8nse2836" path="res://images/cube.png" id="7_bbk5w"]
+[ext_resource type="PackedScene" uid="uid://c5ykhs48pu5pw" path="res://scenes/church.tscn" id="8_bbk5w"]
+[ext_resource type="PackedScene" uid="uid://barmv450r8hhi" path="res://scenes/tnt_portal.tscn" id="9_conm7"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6sh32"]
+albedo_texture = ExtResource("6_ejswk")
+uv1_triplanar = true
+
+[sub_resource type="Sky" id="Sky_ru4tf"]
+
+[sub_resource type="Environment" id="Environment_wm84f"]
+background_mode = 3
+background_color = Color(0.5183258, 0.7413794, 0.78515625, 1)
+background_canvas_max_layer = -1
+sky = SubResource("Sky_ru4tf")
+ambient_light_source = 2
+ambient_light_color = Color(0.92578125, 0.15911865, 0.42864847, 1)
+ambient_light_energy = 2.77
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ejswk"]
+albedo_texture = ExtResource("7_bbk5w")
+
+[node name="Level1" type="Node3D" unique_id=1490480652]
+
+[node name="Sky" type="CanvasLayer" parent="." unique_id=1909409068]
+layer = -1
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="Sky" unique_id=1784227981]
+z_index = -1
+offset_left = -2.0
+offset_top = -49.0
+offset_right = 254.0
+offset_bottom = 175.0
+scale = Vector2(1.5, 1.5)
+mouse_filter = 2
+stream = ExtResource("1_ejswk")
+autoplay = true
+loop = true
+
+[node name="Panel" type="ColorRect" parent="Sky" unique_id=2000409159]
+modulate = Color(1, 1, 1, 0.2784314)
+offset_top = -8.0
+offset_right = 40.0
+offset_bottom = 32.0
+scale = Vector2(8.090655, 6.2310266)
+mouse_filter = 2
+color = Color(0.82421875, 0.048294067, 0.38970095, 1)
+
+[node name="Okurok" parent="." unique_id=345378172 instance=ExtResource("1_dwgg1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.0213437, 1.8838301, 0)
+
+[node name="Player" parent="." unique_id=470161576 instance=ExtResource("1_g2h75")]
+transform = Transform3D(0.99975014, -0.018852137, 0.012007672, 0.018965684, 0.999776, -0.009412353, -0.011827524, 0.009637751, 0.99988365, -0.5711937, 1.7415853, 13.490669)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=445551220]
+transform = Transform3D(-0.73485965, 0.6782192, 0, -0.007358392, -0.007972917, 0.9999412, 0.6781793, 0.73481643, 0.010849577, 0, 22.171577, 0)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="." unique_id=1859381881]
+material_override = SubResource("StandardMaterial3D_6sh32")
+use_collision = true
+size = Vector3(100, 1, 100)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=455432993]
+environment = SubResource("Environment_wm84f")
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="." unique_id=380563282]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.99741054, 0)
+material_override = SubResource("StandardMaterial3D_ejswk")
+use_collision = true
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." unique_id=536058340]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.12132263, 0)
+stream = ExtResource("5_ru4tf")
+autoplay = true
+parameters/looping = true
+
+[node name="TntPortal" parent="." unique_id=892704639 instance=ExtResource("9_conm7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.2323856, 16.738983)
+
+[node name="Church" parent="." unique_id=813082408 instance=ExtResource("8_bbk5w")]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -11.42259, 3.7102633, 0)

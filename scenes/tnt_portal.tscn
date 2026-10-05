@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://barmv450r8hhi"]
+
+[ext_resource type="Texture2D" uid="uid://by03vjt28nlds" path="res://images/portal1.png" id="1_lc0of"]
+[ext_resource type="Script" uid="uid://54qnnwm26nij" path="res://scripts/portal.gd" id="2_dgm6t"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_wm84f"]
+size = Vector3(1, 1.2202148, 1)
+
+[node name="TntPortal" type="Sprite3D" unique_id=892704639]
+billboard = 2
+texture_filter = 0
+texture = ExtResource("1_lc0of")
+script = ExtResource("2_dgm6t")
+scene_in = "res://scenes/tnt_world.tscn"
+scene_out = "res://scenes/level1.tscn"
+
+[node name="Area3D" type="Area3D" parent="." unique_id=1506123605]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=1636643425]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.11010742, 0)
+shape = SubResource("BoxShape3D_wm84f")

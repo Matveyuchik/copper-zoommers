@@ -1,0 +1,44 @@
+[gd_scene format=3 uid="uid://b2kfaeb41etn2"]
+
+[ext_resource type="Texture2D" uid="uid://bjjfjq14j8r5p" path="res://images/sprieh1.png" id="1_bhe5c"]
+[ext_resource type="Script" uid="uid://bsws2bcdx64ae" path="res://scripts/oulekhg.gd" id="1_mof04"]
+[ext_resource type="Texture2D" uid="uid://cj833d7vib72" path="res://images/sprieh2.png" id="2_mof04"]
+[ext_resource type="Texture2D" uid="uid://bkyyr78br7mxa" path="res://images/sprieh3.png" id="3_se3f5"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_idctj"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_bhe5c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_mof04")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_se3f5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_mof04")
+}],
+"loop": 1,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_wm84f"]
+height = 1.3757324
+
+[node name="Oulekhg" type="CharacterBody3D" unique_id=1064634599]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0, 0)
+script = ExtResource("1_mof04")
+
+[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="." unique_id=1582557397]
+billboard = 2
+texture_filter = 0
+sprite_frames = SubResource("SpriteFrames_idctj")
+animation = &"idle"
+autoplay = "idle"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=466912546]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.005004883, 0)
+shape = SubResource("CapsuleShape3D_wm84f")

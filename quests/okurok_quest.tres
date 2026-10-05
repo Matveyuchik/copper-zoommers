@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="QuestResource" format=3 uid="uid://bxwt6vt3yv0cd"]
+
+[ext_resource type="Script" uid="uid://dyky15gshpbcf" path="res://scripts/quest_resource.gd" id="1_obk33"]
+
+[resource]
+script = ExtResource("1_obk33")
+quest_id = "okurok_quest"
+title = "OKUROK VZRYV"
+description = "COLLECT 5 TNT"
+metadata/_custom_type_script = "uid://dyky15gshpbcf"

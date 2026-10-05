@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://sxyay451nag1"
+path="res://.godot/imported/omnious pile of tnt.ogg-cb6c78547ed3d10029652d977437b9de.oggvorbisstr"
+
+[deps]
+
+source_file="res://music/omnious pile of tnt.ogg"
+dest_files=["res://.godot/imported/omnious pile of tnt.ogg-cb6c78547ed3d10029652d977437b9de.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

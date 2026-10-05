@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://wdf2jv7h16yp"
+path="res://.godot/imported/oulekhg.dialogue-8e799db498a73bcdd0fd510a61ba5852.tres"
+
+[deps]
+
+source_file="res://dialogues/oulekhg.dialogue"
+dest_files=["res://.godot/imported/oulekhg.dialogue-8e799db498a73bcdd0fd510a61ba5852.tres"]
+
+[params]
+
+defaults=true

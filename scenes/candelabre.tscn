@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://wbixy0ohhk5j"]
+
+[ext_resource type="Texture2D" uid="uid://356dqnhmwkrf" path="res://images/candelabre.png" id="1_q6xtu"]
+
+[node name="Candelabre" type="Sprite3D" unique_id=1684045777]
+billboard = 2
+texture_filter = 0
+texture = ExtResource("1_q6xtu")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="." unique_id=1395569213]
+light_color = Color(0.8984375, 0.74338794, 0.21408081, 1)

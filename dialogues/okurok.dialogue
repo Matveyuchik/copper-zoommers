@@ -1,0 +1,39 @@
+~ start
+if QuestManager.quests.has("okurok_quest")
+	=> check_quest
+OKUROK: HEY, URODEC.
+YOU: CHTO?
+OKUROK: U MENYA DLYA TEBYA DELO YEST.
+YOU: KAKOE?
+OKUROK: PRINESI 5 [img]res://images/tnt_icon.png[/img] PZHLST.
+- OK
+	YOU: OKEY YA POMOGU.
+	OKUROK: ZHDU.
+	do QuestManager.accept_quest(load("res://quests/okurok_quest.tres"))
+- NE
+	YOU: YA NE MOGU POKA.
+	OKUROK: NU I IDI OTSYUDA...
+=> END
+
+~ check_quest
+if GlobalInventory.data.has_item("TNT", 5) and !QuestManager.quests["okurok_quest"].check_completion()
+	OKUROK: GDE MOY TNT??
+	YOU: VOT.
+	do QuestManager.advance_quest("okurok_quest", 1)
+	do GlobalInventory.data.remove_item("TNT", 5)
+	OKUROK: O, SPASIBO.
+	do GlobalInventory.data.add_item(load("res://items/gold_bar.tres"), 1)
+	OKUROK: DERZHI...
+	=> END
+elif !QuestManager.quests["okurok_quest"].check_completion()
+	OKUROK: GDE MOY TNT??
+	YOU: DA NESU NESU...
+else
+	=> post_quest
+=> END
+
+~ post_quest
+if QuestManager.quests["okurok_quest"].check_completion()
+	OKUROK: CHEGO TEBE?
+	YOU: DA NICHEGO...
+=> END

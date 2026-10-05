@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://dnkm2dgx01n7g"]
+
+[ext_resource type="Texture2D" uid="uid://bnkd7lmm0oetp" path="res://images/tnt_pile.png" id="1_ogi0w"]
+[ext_resource type="Script" uid="uid://crxa73f10pdx" path="res://scripts/tnt_pile.gd" id="1_rg1o7"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_wm84f"]
+size = Vector3(1.6005859, 2.1914673, 1.7753906)
+
+[node name="TntPile" type="StaticBody3D" unique_id=1751105006]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0, 0)
+script = ExtResource("1_rg1o7")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=144612895]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.020019531, 0.007904053, 0.022460938)
+shape = SubResource("BoxShape3D_wm84f")
+
+[node name="Sprite3D" type="Sprite3D" parent="." unique_id=1002635309]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
+billboard = 2
+texture_filter = 0
+texture = ExtResource("1_ogi0w")

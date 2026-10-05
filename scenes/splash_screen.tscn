@@ -1,0 +1,44 @@
+[gd_scene format=3 uid="uid://iibqr0mr87k3"]
+
+[ext_resource type="Script" uid="uid://18ky2lhf5vpf" path="res://scripts/splash_screen.gd" id="1_4gp4q"]
+[ext_resource type="Texture2D" uid="uid://btkhhk1616028" path="res://images/prodcution.png" id="2_4gp4q"]
+[ext_resource type="AudioStream" uid="uid://b8lje7hvqdnmi" path="res://sounds/coper zum prod.mp3" id="3_4gp4q"]
+[ext_resource type="FontFile" uid="uid://kt0msaybnixs" path="res://fonts/copper.ttf" id="4_3mj2l"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_wm84f"]
+font = ExtResource("4_3mj2l")
+font_size = 8
+
+[node name="SplashScreen" type="Control" unique_id=1910750237]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_4gp4q")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1760372784]
+z_index = -1
+layout_mode = 0
+offset_right = 320.0
+offset_bottom = 240.0
+texture = ExtResource("2_4gp4q")
+expand_mode = 1
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=763392955]
+stream = ExtResource("3_4gp4q")
+autoplay = true
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=1397159307]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2.2408056)
+
+[node name="Press" type="Label" parent="." unique_id=1582237741]
+visible = false
+layout_mode = 0
+offset_left = 227.0
+offset_top = 69.0
+offset_right = 285.0
+offset_bottom = 92.0
+text = "PRESS SPACE TO CONTINUE"
+label_settings = SubResource("LabelSettings_wm84f")
